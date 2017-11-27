@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58B8CF0CF4B5C13DF994D35C /* Pods_iOSRecruitmentTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F55FFCE5B8E3C1B8F1ED058 /* Pods_iOSRecruitmentTest.framework */; };
+		80037B581FCBF4510013C6B0 /* ApiLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A1B561FC4AA3800022768 /* ApiLinks.swift */; };
+		80037B591FCBF4540013C6B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804A1B551FC4AA3800022768 /* Constants.swift */; };
+		80037B5A1FCBF4590013C6B0 /* NetworkCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C1871FC5402B00447D24 /* NetworkCalls.swift */; };
+		80037B5B1FCBF45C0013C6B0 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C1881FC5404100447D24 /* NetworkProtocol.swift */; };
+		8064C18A1FC54F6600447D24 /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8064C1891FC54F6500447D24 /* DataObject.swift */; };
 		D93FDE421D114DEA00AB8D9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93FDE411D114DEA00AB8D9B /* AppDelegate.swift */; };
 		D93FDE4A1D114DEA00AB8D9B /* iOSRecruitmentTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D93FDE481D114DEA00AB8D9B /* iOSRecruitmentTest.xcdatamodeld */; };
 		D93FDE4C1D114DEA00AB8D9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D93FDE4B1D114DEA00AB8D9B /* Assets.xcassets */; };
@@ -18,6 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F55FFCE5B8E3C1B8F1ED058 /* Pods_iOSRecruitmentTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSRecruitmentTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB1C02A30AC2F363902F803 /* Pods-iOSRecruitmentTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSRecruitmentTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSRecruitmentTest/Pods-iOSRecruitmentTest.release.xcconfig"; sourceTree = "<group>"; };
+		804A1B551FC4AA3800022768 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		804A1B561FC4AA3800022768 /* ApiLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLinks.swift; sourceTree = "<group>"; };
+		8064C1871FC5402B00447D24 /* NetworkCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCalls.swift; sourceTree = "<group>"; };
+		8064C1881FC5404100447D24 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		8064C1891FC54F6500447D24 /* DataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
+		BF659F20F793527E7473FFF9 /* Pods-iOSRecruitmentTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSRecruitmentTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSRecruitmentTest/Pods-iOSRecruitmentTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D93FDE3E1D114DEA00AB8D9B /* iOSRecruitmentTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSRecruitmentTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D93FDE411D114DEA00AB8D9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D93FDE491D114DEA00AB8D9B /* iOSRecruitmentTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSRecruitmentTest.xcdatamodel; sourceTree = "<group>"; };
@@ -35,17 +49,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58B8CF0CF4B5C13DF994D35C /* Pods_iOSRecruitmentTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		804A1B531FC4AA1100022768 /* CustomObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8064C1861FC5400F00447D24 /* ProtocolsAndDelegates */,
+				8064C1851FC5400300447D24 /* Managers */,
+				8064C1841FC53FFA00447D24 /* Objects */,
+				804A1B541FC4AA2A00022768 /* Constants */,
+			);
+			path = CustomObjects;
+			sourceTree = "<group>";
+		};
+		804A1B541FC4AA2A00022768 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				804A1B561FC4AA3800022768 /* ApiLinks.swift */,
+				804A1B551FC4AA3800022768 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8064C1841FC53FFA00447D24 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8064C1891FC54F6500447D24 /* DataObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		8064C1851FC5400300447D24 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8064C1871FC5402B00447D24 /* NetworkCalls.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8064C1861FC5400F00447D24 /* ProtocolsAndDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				8064C1881FC5404100447D24 /* NetworkProtocol.swift */,
+			);
+			path = ProtocolsAndDelegates;
+			sourceTree = "<group>";
+		};
+		9FD74B96AC49231EFC1905AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F55FFCE5B8E3C1B8F1ED058 /* Pods_iOSRecruitmentTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D93FDE351D114DEA00AB8D9B = {
 			isa = PBXGroup;
 			children = (
 				D93FDE401D114DEA00AB8D9B /* iOSRecruitmentTest */,
 				D93FDE3F1D114DEA00AB8D9B /* Products */,
+				FD4ADEB5FD893E2CBD830164 /* Pods */,
+				9FD74B96AC49231EFC1905AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +129,7 @@
 		D93FDE401D114DEA00AB8D9B /* iOSRecruitmentTest */ = {
 			isa = PBXGroup;
 			children = (
+				804A1B531FC4AA1100022768 /* CustomObjects */,
 				D93FDE5A1D114F9300AB8D9B /* TableViewCell.swift */,
 				D93FDE5B1D114F9300AB8D9B /* TableViewCell.xib */,
 				D93FDE561D114E7A00AB8D9B /* ViewController.swift */,
@@ -73,6 +143,15 @@
 			path = iOSRecruitmentTest;
 			sourceTree = "<group>";
 		};
+		FD4ADEB5FD893E2CBD830164 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF659F20F793527E7473FFF9 /* Pods-iOSRecruitmentTest.debug.xcconfig */,
+				7FB1C02A30AC2F363902F803 /* Pods-iOSRecruitmentTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D93FDE531D114DEA00AB8D9B /* Build configuration list for PBXNativeTarget "iOSRecruitmentTest" */;
 			buildPhases = (
+				6E97475EBADF54B8163F6ECC /* [CP] Check Pods Manifest.lock */,
 				D93FDE3A1D114DEA00AB8D9B /* Sources */,
 				D93FDE3B1D114DEA00AB8D9B /* Frameworks */,
 				D93FDE3C1D114DEA00AB8D9B /* Resources */,
+				AE1018BB119935DA693ABB58 /* [CP] Embed Pods Frameworks */,
+				15196FDD78A6271E85A3182E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +222,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15196FDD78A6271E85A3182E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSRecruitmentTest/Pods-iOSRecruitmentTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E97475EBADF54B8163F6ECC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1018BB119935DA693ABB58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSRecruitmentTest/Pods-iOSRecruitmentTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D93FDE3A1D114DEA00AB8D9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +279,11 @@
 				D93FDE5C1D114F9300AB8D9B /* TableViewCell.swift in Sources */,
 				D93FDE4A1D114DEA00AB8D9B /* iOSRecruitmentTest.xcdatamodeld in Sources */,
 				D93FDE421D114DEA00AB8D9B /* AppDelegate.swift in Sources */,
+				80037B591FCBF4540013C6B0 /* Constants.swift in Sources */,
+				80037B5B1FCBF45C0013C6B0 /* NetworkProtocol.swift in Sources */,
+				80037B581FCBF4510013C6B0 /* ApiLinks.swift in Sources */,
+				80037B5A1FCBF4590013C6B0 /* NetworkCalls.swift in Sources */,
+				8064C18A1FC54F6600447D24 /* DataObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +377,27 @@
 		};
 		D93FDE541D114DEA00AB8D9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF659F20F793527E7473FFF9 /* Pods-iOSRecruitmentTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSRecruitmentTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.snowdog.iOSRecruitmentTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		D93FDE551D114DEA00AB8D9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB1C02A30AC2F363902F803 /* Pods-iOSRecruitmentTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iOSRecruitmentTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pl.snowdog.iOSRecruitmentTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

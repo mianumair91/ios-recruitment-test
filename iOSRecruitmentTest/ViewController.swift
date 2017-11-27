@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
-
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate, NetworkProtocol {
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,9 +18,31 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
 
         // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        
+        self.callAPI()
     }
 
-
+    // MARK: - Functions
+    
+    
+    // MARK: - APICalls
+    func callAPI(){
+        let url:String = ApiLinks.itemsList
+        let params = Constants.dictionaryStandard()
+        let header = Constants.dictionaryStandard()
+        
+        let obj = NetworkCalls(link:url , notificationName:ApiLinks.itemsList, params:params , header:header, addUSerID:false)
+        obj.delegate = self
+        obj.getAPICall()
+    }
+    
+    // MARK: - APICallBacks
+    func apiCallBack(apiName: String, apiResponse: [String : AnyObject]) {
+        if(apiName == ApiLinks.itemsList){
+            
+        }
+    }
+    
     // MARK: - UITableView data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 20
@@ -33,5 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelega
         
         return cell
     }
+    
+    
     
 }
